@@ -32,6 +32,8 @@ npm start
 name: Node.js CI
 
 on:
+  push:
+    branches: ["main"]
   pull_request:
     branches: ["main"]
 
