@@ -1,8 +1,6 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: ["main"]
   pull_request:
     branches: ["main"]
 
@@ -25,3 +23,5 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
+      - name: Deploy on Cloud
+        run: curl "https://api.render.com/deploy/srv-d3rd7kogjchc73cqcgsg?key=XEYj6ZyWxuo"
